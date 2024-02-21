@@ -26,7 +26,13 @@
         </h1>
 
         <div class="row">
-            <ul class="list-group d-flex align-items-center rounded-4 ">
+
+            <!-- 
+                Qui con il 'v-if' verifico che la lughezza di [emails] sia uguale a 10,
+                solo dopo visualizzerò il risultato in pagina
+            -->
+            <ul class="list-group d-flex align-items-center rounded-4 " v-if="emails.length == 10">
+
                 <li class="list-group-item text-center w-75  border border-success " v-for="(email, index) in emails">
                     {{email.response}}
                 </li>
